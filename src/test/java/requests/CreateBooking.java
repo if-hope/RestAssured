@@ -16,10 +16,17 @@ public class CreateBooking {
 
     private String firstname;
     private String lastname;
+
     @JsonProperty("totalprice")
     private int totalPrice;
-    private boolean depositpaid;
-    private BookingDates bookingdates;
-    private String additionalneeds;
+
+    @JsonProperty("depositpaid")
+    private boolean depositPaid;
+
+    @JsonProperty("bookingdates")
+    private BookingDates bookingDates;
+
+    @JsonProperty("additionalneeds")
+    private String additionalNeeds;
 
 }

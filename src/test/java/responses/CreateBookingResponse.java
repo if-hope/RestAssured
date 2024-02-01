@@ -1,20 +1,20 @@
-package requests;
+package responses;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
-
-import java.time.LocalDate;
+import requests.CreateBooking;
 
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class BookingDates {
-@JsonProperty("checkin")
-    private LocalDate checkIn;
-@JsonProperty("checkout")
-    private LocalDate checkOut;
+public class CreateBookingResponse {
+
+    @JsonProperty("bookingid")
+    private int bookingId;
+    private CreateBooking booking;
 }
