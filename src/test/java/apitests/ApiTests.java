@@ -7,6 +7,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.json.JSONObject;
 import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import requests.BookingDates;
@@ -16,6 +17,7 @@ import responses.CreateBookingResponse;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
 import java.util.List;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
@@ -23,6 +25,9 @@ import static org.hamcrest.Matchers.emptyString;
 import static org.hamcrest.Matchers.equalTo;
 
 public class ApiTests {
+
+    //@BeforeClass
+
 
     private int id;
 
@@ -97,9 +102,13 @@ public class ApiTests {
                 .build();
 
 
-        Response response = RestAssured.given().log().all()
+        Response response = RestAssured.given().log().cookies()
                 .spec(getSpec()).body(body)
                 .when().post("/booking");
+
+//        Response response = RestAssured.given().log().all()
+//                .header("Content-Type", "application/json").cookie().body(body)
+//                .when().post("/booking");
 
         response.prettyPrint();
         response.then().statusCode(200);
