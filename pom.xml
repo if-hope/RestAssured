@@ -91,9 +91,9 @@
                         <!--suppress UnresolvedMavenProperty -->
                         <suiteXmlFile>src/test/resources/${suite}.xml</suiteXmlFile>
                     </suiteXmlFiles>
-                    <argLine>
-                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.19/aspectjweaver-1.9.19.jar"
-                    </argLine>
+<!--                    <argLine>-->
+<!--                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.19/aspectjweaver-1.9.19.jar"-->
+<!--                    </argLine>-->
                     <systemPropertyVariables>
                         <allure.results.directory>
                             target/allure-results

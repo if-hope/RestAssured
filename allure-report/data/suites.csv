@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Thu Feb 22 10:56:39 CET 2024","Thu Feb 22 10:56:42 CET 2024","2849","Use tests automation","Regression testing","apitests.ApiTests","apitests.ApiTests","createBooking","createBooking",""
+"failed","Thu Feb 22 10:56:42 CET 2024","Thu Feb 22 10:56:43 CET 2024","916","Use tests automation","Regression testing","apitests.ApiTests","apitests.ApiTests","getBookingById","getBookingById",""
+"passed","Thu Feb 22 10:56:43 CET 2024","Thu Feb 22 10:56:45 CET 2024","2020","Use tests automation","Regression testing","apitests.ApiTests","apitests.ApiTests","getBookingIds","getBookingIds",""

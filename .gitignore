@@ -39,3 +39,4 @@ build/
 /allure-results/
 /.idea/
 /src/main/
+/allure-report/
