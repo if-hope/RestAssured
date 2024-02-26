@@ -70,7 +70,7 @@ pipeline {
         stage('Run with Maven options') {
             steps {
                 withMaven(maven: 'maven_3_9_6', jdk: 'JDK_17'){
-                    sh 'mvn clean test -Dsuite=${suite_name}'
+                    sh 'mvn clean test -Dsuite=onetest'
                 }
             }
         }
